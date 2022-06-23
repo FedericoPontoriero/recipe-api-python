@@ -1,5 +1,4 @@
 from django.urls import path
-from pyrsistent import v
 from user import views
 
 app_name = 'user'
