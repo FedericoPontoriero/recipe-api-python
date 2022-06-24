@@ -54,7 +54,7 @@ class PrivateIngredientsApiTest(TestCase):
         res = self.client.get(INGREDIENTS_URL)
         
         self.assertEqual(res.status_code, status.HTTP_200_OK)
-        self.assertEqual(res.data, 1)
+        self.assertEqual(len(res.data), 1)
         self.assertEqual(res.data[0]['name'], ingredient.name)
         
     def test_create_ingredients_successfull(self):
